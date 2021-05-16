@@ -9,7 +9,7 @@
 ## What has been added:
 - added `svelte-preprocess-sass` to allow usage of scss syntax
 - added `@rollup/plugin-alias` to use path aliasing like in sveltekit
-- added `gulpfile.js` to allow writing global.css in sass
+- added `gulpfile.js` and its dependencies to allow writing global.css in sass
 
 ## Compiling global.css:
 
