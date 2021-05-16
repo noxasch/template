@@ -16,14 +16,15 @@
     "gulp": "^4.0.2",
     "gulp-postcss": "^9.0.0",
     "gulp-sass": "^4.1.0",
-    "node-sass": "^6.0.0",
+    "postcss": "^8.2.15",
     "rollup": "^2.3.4",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-livereload": "^2.0.0",
     "rollup-plugin-svelte": "^7.0.0",
     "rollup-plugin-terser": "^7.0.0",
+    "sass": "^1.32.13",
     "svelte": "^3.0.0",
-    "svelte-preprocess-sass": "^1.0.0"
+    "svelte-preprocess": "^4.7.3"
   },
   "dependencies": {
     "sirv-cli": "^1.0.0"
