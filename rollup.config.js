@@ -4,8 +4,18 @@ import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import css from 'rollup-plugin-css-only';
+import { sass } from 'svelte-preprocess-sass';
+import alias from '@rollup/plugin-alias';
 
 const production = !process.env.ROLLUP_WATCH;
+
+const aliases = alias({
+	resolve: ['.mjs', '.js', '.jsx', '.json', '.sass', '.scss', '.svelte'],
+	entries: [
+		{ find: '$src', replacement: `${__dirname}/src/` },
+		{ find: '$lib', replacement: `${__dirname}/src/lib/` },
+	],
+});
 
 function serve() {
 	let server;
@@ -37,10 +47,14 @@ export default {
 		file: 'public/build/bundle.js'
 	},
 	plugins: [
+		aliases,
 		svelte({
 			compilerOptions: {
 				// enable run-time checks when not in production
 				dev: !production
+			},
+			preprocess: {
+				style: sass(),
 			}
 		}),
 		// we'll extract any component CSS out into

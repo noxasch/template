@@ -4,12 +4,29 @@
 
 # svelte app
 
+**This is a modified version of the [original svelte template](https://github.com/sveltejs/template)**
+
+## What has been added:
+- added `svelte-preprocess-sass` to allow usage of scss syntax
+- added `@rollup/plugin-alias` to use path aliasing like in sveltekit
+- added `gulpfile.js` to allow writing global.css in sass
+
+## Compiling global.css:
+
+```s
+gulp
+
+# or
+
+gulp scssTask # without watch
+```
+
 This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/sveltejs/template.
 
 To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
 
 ```bash
-npx degit sveltejs/template svelte-app
+npx degit noxasch/template svelte-app
 cd svelte-app
 ```
 
