@@ -56,9 +56,10 @@ export default {
 			},
 			preprocess: sveltePreprocess({
 				sass: true,
+				scss: true,
 				sourceMap: !production,
 				postcss: {
-					plugins: [autoprefixer()]
+					plugins: [autoprefixer()],
 				}
 			})
 		}),
