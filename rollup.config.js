@@ -12,8 +12,8 @@ const production = !process.env.ROLLUP_WATCH;
 const aliases = alias({
 	resolve: ['.mjs', '.js', '.jsx', '.json', '.sass', '.scss', '.svelte'],
 	entries: [
-		{ find: '$src', replacement: `${__dirname}/src/` },
-		{ find: '$lib', replacement: `${__dirname}/src/lib/` },
+		{ find: '$src', replacement: `${__dirname}/src` },
+		{ find: '$lib', replacement: `${__dirname}/src/lib` },
 	],
 });
 
